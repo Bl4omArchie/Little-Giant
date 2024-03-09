@@ -7,6 +7,8 @@
 #include <stdint.h>
 
 
+// --------- {s} Structures ---------
+
 // s1: Little_Giant alias LG
 typedef struct Little_Giant {
     uint64_t number;
@@ -14,8 +16,17 @@ typedef struct Little_Giant {
 } Lg;
 
 
+// --------- {c} Constants ---------
 
-// --------- f1: Implementation of Little Giant bignum type ---------
+// c1.1, c1.2: output constants
+#define LG_OK 1
+#define LG_ERR -1
+
+
+
+// ---------  {f} Implementation  ---------
+
+// ********* f1 Implementation of Little Giant bignum type *********
 
 // f1.1
 int init_littleg(Lg *number);
@@ -31,6 +42,8 @@ int set_littleg_zero(Lg *number);
 
 int clear_littleg(Lg *number);
 int free_littleg(Lg *number);
+
+// *****************************************************************
 
 
 #endif
