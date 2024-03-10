@@ -2,9 +2,32 @@
 
 
 Little Giant is library written in C for big integers computation.
+This bignum structure handle, for now, natural and positive integers only.
 
 
-# Algorithms listing
+# Roadmap
+
+## TODO 
+
+- implementation of the utility functions for little-giant data structure
+- create a test branch (googleTest or simple test in C)
+
+The, start implementing arithmetical algorithms  
+
+## Algorithms
+There is a list, still not complete, about algorithms I want to implements:
+
+- multiplication: Karatsuba, Toom-Cook
+- modular multiplication: Montgomery multiplication paper by Joppe W. Bos, Thorsten Kleinjung and Dan Page
+- exponentiation: binary
+- modular exponentiation: binary
+- binary GCD: Fast-GB by Damien Stehlé and Paul Zimmermann
+- primality test: Miller-Rabin, Lucas-Lehmer
+
+Much more incoming.
+
+
+# Listing
 
 ### Structure
 - s1: Little_Giant alias LG
