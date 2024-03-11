@@ -11,8 +11,8 @@
 
 // s1: Little_Giant alias LG
 typedef struct Little_Giant {
-    uint64_t number;
-    int bit_size;
+    uint64_t *number;
+    size_t byte_size;
 } Lg;
 
 
@@ -23,27 +23,33 @@ typedef struct Little_Giant {
 #define LG_ERR -1
 
 
+// c2: number of elements. 
+// Each elements is a 64 bits number so if you want a 1024 number you need an array of 16 numbers (1024/64 = 16)
+#define LG_INIT_BYTE_SIZE 16
+
+
 
 // ---------  {f} Implementation  ---------
 
 // ********* f1 Implementation of Little Giant bignum type *********
 
 // f1.1
-int init_littleg(Lg *number);
+int init_littleg(Lg *lg_num);
 
 // f1.2, f1.3, f1.4
 // set_littleg_ul: set a unsigned long into a LG number
 // set_littleg_lg: set a LG into another LG number
 // set_littleg_zero: set a LG number to 0
 
-int set_littleg_ul(Lg *number, uint64_t data);
-int set_littleg_lg(Lg *number, Lg data);
-int set_littleg_zero(Lg *number);
+int set_littleg_ul(Lg *lg_num, uint64_t data);
+int set_littleg_lg(Lg *lg_num, Lg data);
+int set_littleg_zero(Lg *lg_num);
 
-int clear_littleg(Lg *number);
-int free_littleg(Lg *number);
+int clear_littleg(Lg *lg_num);
+int free_littleg(Lg *lg_num);
 
 // *****************************************************************
+
 
 
 #endif
