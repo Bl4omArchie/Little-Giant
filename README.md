@@ -37,9 +37,12 @@ Much more incoming.
     - c1.1: positive return
     - c1.2: negative return (error)
 
+- c2: initial size of the lg_number
+
 ### Functions
 
 - f1: Implementation of Little Giant bignum type
+    - f1.1: init_littleg
     - f1.2: set_littleg_ul
     - f1.3: set_littleg_lg
     - f1.4: set_littleg_zero
