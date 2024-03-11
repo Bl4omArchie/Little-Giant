@@ -2,50 +2,55 @@
 
 
 // f1.1
-int init_littleg(Lg *lg_num) {
-    if (lg_num == NULL) 
+int init_littleg(Lg *num) {
+    if (num != NULL) 
         return LG_ERR;
 
-    lg_num->byte_size = LG_INIT_BYTE_SIZE;
-    lg_num->number = malloc(*lg_num->number * LG_INIT_BYTE_SIZE);
+    num->byte_size = LG_INIT_BYTE_SIZE;
+    num->number = malloc(*num->lg_number * LG_INIT_BYTE_SIZE);
     return LG_OK;
 }
 
 // f1.2
-int set_littleg_ul(Lg *lg_num, uint64_t data) {
-    if (lg_num == NULL) 
+int set_littleg_ul(Lg *num, uint64_t data) {
+    if (num == NULL) 
         return LG_ERR;
     
+    free(num);
+    num->lg_number[0] = data;
     return LG_OK; 
-}
+}   
 
 // f1.3
-int set_littleg_lg(Lg *lg_num, Lg data) {
-    if (lg_num == NULL) 
+int set_littleg_lg(Lg *num, Lg data) {
+    if (num == NULL) 
         return LG_ERR;
+
     
     return LG_OK;
 }
 
 // f1.4
-int set_littleg_zero(Lg *lg_num) {
-    if (lg_num == NULL) 
+int set_littleg_zero(Lg *num) {
+    if (num == NULL) 
         return LG_ERR;
     
+    free(num);
+    num->lg_number[0] = 0;
     return LG_OK;
 }
 
 
-int clear_littleg(Lg *lg_num) {
-    if (lg_num == NULL) 
+int clear_littleg(Lg *num) {
+    if (num == NULL) 
         return LG_ERR;
 
     return LG_OK;
 }
 
 
-int free_littleg(Lg *lg_num) {
-    if (lg_num == NULL) 
+int free_littleg(Lg *num) {
+    if (num == NULL) 
         return LG_ERR;
         
     return LG_OK;
