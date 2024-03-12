@@ -37,7 +37,8 @@ Much more incoming.
     - c1.1: positive return
     - c1.2: negative return (error)
 
-- c2: initial size of the lg_number
+- c2: how many 64 bits numbers you can store. The initial value is 2: 64 bits + 64 bits = 128 bits number
+The size grow automatically until you run out of memory !
 
 ### Functions
 

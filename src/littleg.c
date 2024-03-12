@@ -6,8 +6,8 @@ int init_littleg(Lg *num) {
     if (num != NULL) 
         return LG_ERR;
 
-    lg_num->byte_size = LG_INIT_ELEMENTS;
-    lg_num->number = malloc(*lg_num->number * LG_INIT_ELEMENTS);
+    num->byte_size = LG_INIT_ELEMENTS;
+    num->lg_num = malloc(*num->lg_num * LG_INIT_ELEMENTS);
     return LG_OK;
 }
 
@@ -17,7 +17,7 @@ int set_littleg_ul(Lg *num, uint64_t data) {
         return LG_ERR;
     
     free(num);
-    num->lg_number[0] = data;
+    num->lg_num[0] = data;
     return LG_OK; 
 }   
 
@@ -36,7 +36,7 @@ int set_littleg_zero(Lg *num) {
         return LG_ERR;
     
     free(num);
-    num->lg_number[0] = 0;
+    num->lg_num[0] = 0;
     return LG_OK;
 }
 

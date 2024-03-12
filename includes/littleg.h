@@ -25,7 +25,7 @@ typedef struct Little_Giant {
 
 // c2: number of elements. 
 // Each elements is a 64 bits number so if you want a 1024 number you need an array of 16 numbers (1024/64 = 16)
-#define LG_INIT_BYTE_SIZE 16
+#define LG_INIT_ELEMENTS 16
 
 
 
