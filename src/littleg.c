@@ -6,8 +6,8 @@ int init_littleg(Lg *lg_num) {
     if (lg_num == NULL) 
         return LG_ERR;
 
-    lg_num->byte_size = LG_INIT_BYTE_SIZE;
-    lg_num->number = malloc(*lg_num->number * LG_INIT_BYTE_SIZE);
+    lg_num->byte_size = LG_INIT_ELEMENTS;
+    lg_num->number = malloc(*lg_num->number * LG_INIT_ELEMENTS);
     return LG_OK;
 }
 
